@@ -5,3 +5,11 @@
     font-family: sans-serif;
 }
 
+.fa-trash, .fa-check-circle{
+    pointer-events: none;
+}
+
+.button-checked{
+    width: 100px;
+    height: 100px;
+}
