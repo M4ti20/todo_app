@@ -5,11 +5,120 @@
     font-family: sans-serif;
 }
 
-.fa-trash, .fa-check-circle{
-    pointer-events: none;
+header{
+    box-shadow: 3px 3px 10px -1px rgba(0,0,0,0.38);
+    margin-bottom: 7px;
+    padding: 10px;
+    
 }
 
-.button-checked{
-    width: 100px;
-    height: 100px;
+main{
+    display: flex;
+}
+
+.form-box{
+    width: 30%;
+    height: 100vh;
+    background-color: #f0f0f0;
+    box-shadow: 8px -3px 10px -10px rgba(0,0,0,0.38);
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-input{
+    min-height: 150px;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.38);
+    margin-bottom: 15px;
+    color: #575757;
+}
+
+.add-todo-button{
+    background-color: #ffdc64;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.38);
+    padding: 10px;
+    font-weight: 700;
+}
+
+.worker-finder{
+    border: none;
+    background: none;
+    box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.38);
+    padding: 7px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #575757;
+}
+
+.display-box{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.filtr-btn{
+    width: 220px;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.38);
+    background-color: #ffdc64;
+    padding: 15px 10px;
+    margin: 0 20px;
+}
+
+.new-task{
+    width: 60vh;
+    min-height: 150px;
+    background-color: #f0f0f0;
+    box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.38);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.buttons-div{
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.fa-trash, .fa-check-circle{
+    pointer-events: none;
+    background: none;
+    border: none;
+}
+
+.check-btn{
+    border: none;
+    font-size: 1.5rem;
+    margin-bottom: 100px;
+}
+
+.check-btn-green{
+    border: none;
+    font-size: 1.5rem;
+    margin-bottom: 100px;
+    color: rgb(4, 156, 50);
+}
+
+.trash-btn{
+    border: none;
+    font-size: 1.5rem;
 }

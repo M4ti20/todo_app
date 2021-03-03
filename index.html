@@ -14,11 +14,20 @@
     </header>
     <main>
         <section class="form-box">
-            <input type="text" class="todo-input">
+            <select class="worker-finder">
+                <option>Jan Kowalski</option>
+                <option>Tomasz Nowak</option>
+                <option>Tomasz Kowalski</option>
+            <select>
+            <input type="text" class="todo-input" placeholder="Zadanie">
             <button type="submit" class="add-todo-button">DODAJ</button>
         </section>
         <section class="display-box">
-            <section class="buttons"></section>
+            <section class="buttons">
+                <button class="filtr-btn">POKAŻ WSZYSTKIE</button>
+                <button class="filtr-btn">POKAŻ UKOŃCZONE</button>
+                <button class="filtr-btn">POKAŻ NIEUKOŃCZONE</button>
+            </section>
             <section class="todos-and-stats">
                 <section class="todo-container">
                     

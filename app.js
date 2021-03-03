@@ -13,15 +13,19 @@ function addTodo(e) {
     todoContainer.appendChild(newTask);
     todoInput.value = "";
 
+    const buttonsDiv = document.createElement("div");
+    buttonsDiv.classList.add("buttons-div");
+    newTask.appendChild(buttonsDiv);
+
     const checkIcon = document.createElement("button");
     checkIcon.innerHTML = '<i class="fa fa-check-circle"></i>';
     checkIcon.classList.add("check-btn");
-    newTask.appendChild(checkIcon)
+    buttonsDiv.appendChild(checkIcon)
 
     const trashIcon = document.createElement("button");
     trashIcon.innerHTML = '<i class="fa fa-trash"></i>';
     trashIcon.classList.add("trash-btn");
-    newTask.appendChild(trashIcon)
+    buttonsDiv.appendChild(trashIcon)
 
 }
 
@@ -31,9 +35,11 @@ todoContainer.addEventListener("click", deleteAcheckTask);
 function deleteAcheckTask(e) {
     
     if (e.target.classList[0] === "trash-btn") {
-        const todo = e.target.parentElement;
+        const todo = e.target.parentElement.parentElement;
         todo.remove();
     } else if (e.target.classList[0] === "check-btn") {
-        console.log("hey")
+        const checkIcon = e.target;
+        checkIcon.classList.add("check-btn-green");
+        checkIcon.classList.remove("check-btn");
     }
 }
