@@ -15,6 +15,12 @@ function addTodo(e) {
         newTask.innerText = todoInput.value;
         todoContainer.appendChild(newTask);
 
+        const postDate = document.createElement("div");
+        postDate.classList.add("post-date");
+        const date = new Date();
+        postDate.innerHTML = `${date.getDay()}, ${date.getMonth()}, ${date.getFullYear()} `;
+        newTask.appendChild(postDate);
+
         const buttonsDiv = document.createElement("div");
         buttonsDiv.classList.add("buttons-div");
         newTask.appendChild(buttonsDiv);
@@ -76,6 +82,12 @@ function getTask() {
         newTask.classList.add("new-task");
         newTask.innerText = todo;
         todoContainer.appendChild(newTask);
+
+        const postDate = document.createElement("div");
+        postDate.classList.add("post-date");
+        const date = new Date();
+        postDate.innerHTML = `${date.getDay()}, ${date.getMonth()}, ${date.getFullYear()} `;
+        newTask.appendChild(postDate);
 
         const buttonsDiv = document.createElement("div");
         buttonsDiv.classList.add("buttons-div");

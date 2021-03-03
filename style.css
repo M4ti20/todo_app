@@ -37,12 +37,15 @@ main{
     word-wrap: break-word;}
 
 .add-todo-button{
+    width: 100%;
     background-color: #ffdc64;
     border: none;
     border-radius: 5px;
     box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.38);
     padding: 10px;
     font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .worker-finder{
@@ -90,8 +93,14 @@ main{
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 30px;
+    margin-right: 30px;
     padding-left: 10px;
     padding-top: 10px;
+}
+
+.post-date{
+    font-weight: 700;
+    font-size: 0.8rem;
 }
 
 .buttons-div{
@@ -123,4 +132,27 @@ main{
 .trash-btn{
     border: none;
     font-size: 1rem;
+}
+
+.todos-and-stats{
+    display: flex;
+}
+
+.stats{
+    width: 250px;
+    height: 150px;
+    background-color: #f0f0f0;
+    box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.38);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.stats-title {
+    font-weight: 700;
+    margin-bottom: 20px;
 }
