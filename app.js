@@ -1,6 +1,7 @@
 const todoInput = document.querySelector(".todo-input");
 const addTodoButton = document.querySelector(".add-todo-button");
 const todoContainer = document.querySelector(".todo-container");
+const workerSelect = document.querySelector(".worker-finder-select")
 
 addTodoButton.addEventListener("click", addTodo);
 
@@ -14,6 +15,10 @@ function addTodo(e) {
         newTask.classList.add("new-task");
         newTask.innerText = todoInput.value;
         todoContainer.appendChild(newTask);
+
+        const workerName = document.createElement("p");
+        workerName.innerText = workerSelect.value;
+        newTask.appendChild(workerName);
 
         const postDate = document.createElement("div");
         postDate.classList.add("post-date");

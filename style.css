@@ -48,7 +48,7 @@ main{
     justify-content: flex-end;
 }
 
-.worker-finder{
+.worker-finder-select{
     border: none;
     background: none;
     box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.38);
