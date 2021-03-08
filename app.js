@@ -13,18 +13,26 @@ function addTodo(e) {
     }else {
         const newTask = document.createElement("div");
         newTask.classList.add("new-task");
-        newTask.innerText = todoInput.value;
         todoContainer.appendChild(newTask);
 
+        const taskTextDiv = document.createElement("div");
+        taskTextDiv.classList.add("task-text-div")
+        newTask.appendChild(taskTextDiv);
+        
         const workerName = document.createElement("p");
+        workerName.classList.add("worker-name");
         workerName.innerText = workerSelect.value;
-        newTask.appendChild(workerName);
+        taskTextDiv.appendChild(workerName);
 
         const postDate = document.createElement("div");
         postDate.classList.add("post-date");
         const date = new Date();
         postDate.innerHTML = `${date.getDay()}, ${date.getMonth()}, ${date.getFullYear()} `;
-        newTask.appendChild(postDate);
+        taskTextDiv.appendChild(postDate);
+
+        const taskText = document.createElement("p");
+        taskText.innerText = todoInput.value;
+        taskTextDiv.appendChild(taskText);
 
         const buttonsDiv = document.createElement("div");
         buttonsDiv.classList.add("buttons-div");
@@ -85,14 +93,26 @@ function getTask() {
     todos.forEach(function(todo){
         const newTask = document.createElement("div");
         newTask.classList.add("new-task");
-        newTask.innerText = todo;
         todoContainer.appendChild(newTask);
+
+        const taskTextDiv = document.createElement("div");
+        taskTextDiv.classList.add("task-text-div")
+        newTask.appendChild(taskTextDiv);
+        
+        const workerName = document.createElement("p");
+        workerName.classList.add("worker-name");
+        workerName.innerText = workerSelect.value;
+        taskTextDiv.appendChild(workerName);
 
         const postDate = document.createElement("div");
         postDate.classList.add("post-date");
         const date = new Date();
         postDate.innerHTML = `${date.getDay()}, ${date.getMonth()}, ${date.getFullYear()} `;
-        newTask.appendChild(postDate);
+        taskTextDiv.appendChild(postDate);
+
+        const taskText = document.createElement("p");
+        taskText.innerText = todo;
+        taskTextDiv.appendChild(taskText);
 
         const buttonsDiv = document.createElement("div");
         buttonsDiv.classList.add("buttons-div");

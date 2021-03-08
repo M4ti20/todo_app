@@ -28,13 +28,16 @@ main{
 
 .todo-input{
     min-height: 150px;
+    width: 100%;
     background: none;
     border: none;
     border-radius: 5px;
     box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.38);
     margin-bottom: 15px;
     color: #575757;
-    word-wrap: break-word;}
+    text-align: unset;
+    overflow: hidden;
+}
 
 .add-todo-button{
     width: 100%;
@@ -45,7 +48,7 @@ main{
     padding: 10px;
     font-weight: 700;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .worker-finder-select{
@@ -98,9 +101,24 @@ main{
     padding-top: 10px;
 }
 
+.task-text-div{
+    height: 100%;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.worker-name{
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
 .post-date{
     font-weight: 700;
     font-size: 0.8rem;
+    margin-bottom: 20px;
 }
 
 .buttons-div{
