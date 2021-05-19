@@ -2,6 +2,9 @@ const todoInput = document.querySelector(".todo-input");
 const addTodoButton = document.querySelector(".add-todo-button");
 const todoContainer = document.querySelector(".todo-container");
 const workerSelect = document.querySelector(".worker-finder-select")
+const allTodos = document.querySelector(".all-filtr-btn")
+const doneTodos = document.querySelector(".done-filtr-btn")
+const notDoneTodos = document.querySelector(".not-done-filtr-btn")
 
 addTodoButton.addEventListener("click", addTodo);
 
@@ -53,7 +56,6 @@ function addTodo(e) {
             todoInput.value = "";
         }
     }
-
 
 todoContainer.addEventListener("click", deleteAcheckTask);
 
@@ -143,3 +145,4 @@ function removeFromLocal(todo) {
     localStorage.setItem("todos", JSON.stringify(todos));
 
 }
+
